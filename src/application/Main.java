@@ -19,7 +19,7 @@ public class Main {
 
 
         while (!chessMatch.getCheckMate()) {
-            //try{
+            try {
                 UI.clearScreen();
                 UI.printMatch(chessMatch, captured);
                 System.out.println();
@@ -38,16 +38,16 @@ public class Main {
                 if (capturedPiece != null) {
                     captured.add(capturedPiece);
                 }
-
-           /* }catch (ChessException e){
+            } catch (ChessException e) {
                 System.out.println(e.getMessage());
                 sc.nextLine();
-            }catch (InputMismatchException e){
+            } catch (InputMismatchException e) {
                 System.out.println(e.getMessage());
                 sc.nextLine();
-            }*/
+            }
+            UI.clearScreen();
+            UI.printMatch(chessMatch, captured);
         }
-        UI.clearScreen();
-        UI.printMatch(chessMatch, captured);
+
     }
 }
